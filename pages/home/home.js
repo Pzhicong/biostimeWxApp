@@ -69,13 +69,25 @@ Page({
           // that.setData({
           //   images: res.tempFilePath
           // });
+          ctx.setFillStyle('white')
+          ctx.fillRect(0, 0, 300, 300)
+
           ctx.save()
           ctx.beginPath()
           ctx.arc(50, 50, 25, 0, 2*Math.PI)
           ctx.clip()
-          ctx.drawImage(res.tempFilePath, 25, 25)
+          ctx.drawImage(res.tempFilePath, 25, 25,50,50);
           ctx.restore()
           ctx.draw()
+          ctx.drawImage('https://weixin.mama100.cn/wmall/activity/2017/20170623_sevenDaysCrashClass/images/share.jpg', 0, 150, 150, 100)
+          ctx.setFontSize(20);
+          ctx.setFillStyle('#abcabc');
+          ctx.fillText('Hello',150,20);
+          ctx.setFontSize(60);
+          ctx.setFillStyle('red');
+          ctx.fillText('world',150,40);
+          ctx.save();
+          ctx.draw(true);
       }
     })
     // const ctx = wx.createCanvasContext('myCanvas');

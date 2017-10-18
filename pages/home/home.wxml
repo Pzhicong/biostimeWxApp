@@ -1,0 +1,52 @@
+<!--home.wxml-->
+<import src="../../templates/banner/index"></import>
+<view class="mainPage">
+  <template is="banner" data="{{...bannerObj}}"></template>
+  <view class="tabLabel">
+    <label id="coupon" data-url="../index/index" bindtap="goToPage">积分券</label>
+    <label>我的积分</label>
+    <label>兑换记录</label>
+  </view>
+  <view class="">
+    <view class="classifyTitle">— 超值兑换 —</view>
+    <view class="exchangeItem flex-wrp" style="flex-direction:row;">
+      <view class="product" bindtap = "onItemClick" data-url="http://img1.3lian.com/2015/w7/85/d/101.jpg">
+        <image src="../../images/goods.jpg"></image>
+      </view>
+      <view>
+        <view class="productName">
+          <text>中国移动70M流量包/个</text>
+        </view>
+        <view class="productPrice">
+          <label class="productNum">
+            <image class="priceIcon" src="../../images/priceIcon.png"></image> 
+            80积分
+          </label>
+          <label class="exchangeBtn">立即兑换</label>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="">
+    <view class="classifyTitle">— 我可兑换 —</view>
+    <view class="exchangeItem flex-wrp" style="flex-direction:row;">
+      <view class="product">
+        <image src="../../images/product.png"></image>
+      </view>
+      <view>
+        <view class="productName">
+          <text>超级金装3段奶粉/罐</text>
+        </view>
+        <view class="productPrice">
+          <label class="productNum">
+            <image class="priceIcon" src="../../images/priceIcon.png"></image> 
+            3000积分
+          </label>
+          <label class="exchangeBtn">立即兑换</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <image src="{{images}}"></image> -->
+<canvas canvas-id="myCanvas" style="border: 1px solid;display:block;width:300px;height:300px;" id="myCanvas"/>

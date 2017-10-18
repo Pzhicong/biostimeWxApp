@@ -1,0 +1,75 @@
+/* home.wxss */
+@import "../../templates/banner/index.wxss";
+.mainPage {
+  background-color: #dfdfdf;
+}
+
+.banner {
+  height: 200px;
+}
+.slide-image {
+  height: 200px;
+}
+.tabLabel {
+  display: flex;
+}
+.tabLabel > label {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  flex: 1;
+  color:#282828;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #ffffff;
+  margin: 5px 5px 0px 5px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.classifyTitle {
+  height: 48px;
+  line-height:52px;
+  color:#282828;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+.exchangeItem {
+  height: 160px;
+  padding: 5px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+  font-size: 16px;
+}
+.exchangeItem .product > image {
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.exchangeItem .productName {
+  padding-top: 20px;
+  height: 115px;
+}
+
+.exchangeItem .priceIcon {
+  width: 10px;
+  height: 10px;
+}
+
+.exchangeItem .productPrice {
+  padding-left: 2px;
+  font-size: 14px;
+}
+.exchangeItem .productNum {
+  padding-right: 8px;
+}
+.exchangeItem .exchangeBtn {
+  font-size: 14px;
+}

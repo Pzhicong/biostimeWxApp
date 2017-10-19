@@ -13,7 +13,12 @@ Page({
       imgUrls: ['http://img2.mama100.com/order-point/banner/1502848747777.jpg', 'http://img2.mama100.com/order-point/banner/1502848747777.jpg']
     },
     images:'',
-    memberNum: 123
+    todayStep: 12399,
+    allStep: 11101010,
+    firstTransform: 'rotate(0deg)',
+    secondTransform: 'rotate(0deg)',
+    borderColor:"white white white transparent",
+    stepNum: 12313
   },
 
   goToPage: function (event) {
@@ -29,7 +34,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {},
+  onReady: function () {
+    // var val = 10;
+    // var query = wx.createSelectorQuery();
+    // var bg1 = query.select('#J_bg2_1');
+    // var bg2 = query.select('#J_bg2_2');
+    // var val = parseFloat(btn1.value).toFixed(2);
+    // val = Math.max(0,val);
+    // val = Math.min(100,val);
+    var val = 10;
+    if (val <= 50){
+        this.setData({
+          secondTransform: "rotate(" + 180 * val * 2 / 100 + "deg)",
+          borderColor:'white white white transparent',
+          firstTransform: "rotate(0deg)"
+        });
+        // bg2.style.transform = "rotate(" + 180 * val * 2 / 100 + "deg)";
+        // bg2.style.borderColor = "white white white transparent";
+        // bg1.style.transform = "rotate(0deg)";
+    }else{
+      this.setData({
+        secondTransform: "rotate(0deg)",
+        borderColor:'red red red transparent',
+        firstTransform: "rotate(" + 180 * (val - 50) * 2 / 100 + "deg)"
+      });
+        // bg2.style.transform = "rotate(0deg)";
+        // bg2.style.borderColor = "red red red transparent";
+        // bg1.style.transform = "rotate(" + 180 * (val - 50) * 2 / 100 + "deg)";
+    }
+  },
 
   /**
    * 生命周期函数--监听页面显示

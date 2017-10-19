@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/mine/mine",
+    "pages/guide/guide",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs"

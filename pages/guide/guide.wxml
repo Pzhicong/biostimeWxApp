@@ -1,0 +1,9 @@
+<view class="firstPage">
+    <image src="../../images/bg.png" class="fullImages"></image>
+    <image src="../../images/swisse.png" class="swisse"></image>
+    <label class="ruleBtn">打卡规则</label>
+    <image src="../../images/bg1.png" class="bg1"></image>
+    <image src="../../images/bg2.png" class="bg2"></image>
+    <view class="number">{{memberNum}}位行者已经跑起来</view>
+    <image src="../../images/run_bt.png" class="runBtn" bindtap = "startRun"></image>
+</view>

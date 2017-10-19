@@ -13,7 +13,7 @@ Page({
       imgUrls: ['http://img2.mama100.com/order-point/banner/1502848747777.jpg', 'http://img2.mama100.com/order-point/banner/1502848747777.jpg']
     },
     images:'',
-    memberNum: 123
+    memberNum: 12345
   },
 
   goToPage: function (event) {
@@ -161,6 +161,12 @@ Page({
       complete: function (res) {
         console.log("download complete");
       }
+    })
+  },
+
+  startRun: function() {
+    wx.redirectTo({
+      url: '../home/home'
     })
   }
 })

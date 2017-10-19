@@ -1,0 +1,12 @@
+.firstPage{ text-align: center;position:relative;height:100%;overflow: hidden;}
+.firstPage .fullImages{width:100vw;height:100vh;}
+/* 52/139 */
+.firstPage .swisse{top:20px;left:20px;width:20vw;height:7.48vw;position:absolute;}
+.firstPage .ruleBtn{top:25px;right:20px;color:white;text-decoration: underline;position:absolute;font-size: 14px;}
+/* 403/661 */
+.firstPage .bg1{position:absolute;top:10%;right:10vw;width:80vw;height:48.77vw;}
+/* 358/661 */
+.firstPage .bg2{position:absolute;top:45%;right:10vw;width:80vw;height:43.33vw;}
+.firstPage .number{position:absolute;top:80%;color:white;font-size:14px;width:100vw;}
+/* 80/300 */
+.firstPage .runBtn{position:absolute;top:85%;width:40vw;left:30vw;height:10.67vw;}

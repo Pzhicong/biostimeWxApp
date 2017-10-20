@@ -22,7 +22,9 @@ Page({
     borderColor:"white white white transparent",
     stepNum: 12313,
     dayNum:7,
-    userInfo: {}
+    userInfo: {},
+    canvasAppear: 'none',
+    maskAppear: 'block'
   },
 
   goToPage: function (event) {
@@ -97,6 +99,9 @@ Page({
   onShareAppMessage: function () {},
   onItemClick: function (event) {
     var that = this;
+    that.setData({
+      canvasAppear: 'block'
+    })
     const ctx = wx.createCanvasContext('myCanvas');
     wx.downloadFile({
       // url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
@@ -146,6 +151,9 @@ Page({
                 filePath: res.tempFilePath,
                 success: function (res1) {
                   console.log(JSON.stringify(res1));
+                  that.setData({
+                    canvasAppear: 'none'
+                  })
                   // success
                 },
                 fail: function () {
@@ -214,6 +222,9 @@ Page({
           // filePath: res.tempFilePath,
           success: function (res1) {
             console.log(JSON.stringify(res1));
+            that.setData({
+              canvasAppear: 'none'
+            })
             // success
           },
           fail: function () {

@@ -74,7 +74,7 @@
 </view>
 
 <!-- 弹窗遮罩层 -->
-<view class="downloadMask" style="display:none;">
+<view class="downloadMask" style="display:{{maskAppear}};">
     <view class="downloadContainer">
         <image src="../../images/close.png" class="close"></image>
         <image src="../../images/share.png" class="bg"></image>
@@ -100,4 +100,4 @@
     <view style="position:fixed;top:0;right:0;left:0;bottom:0;background:black;opacity:0.7;"></view>
 </view>
 
-<canvas canvas-id="myCanvas" id="myCanvas" style="width:300px;height:300px;border:1px solid gray;"></canvas>
+<canvas canvas-id="myCanvas" id="myCanvas" style="width:300px;height:300px;border:1px solid gray;margin-top:200px;display:{{canvasAppear}}"></canvas>

@@ -1,4 +1,6 @@
 // home.js
+var app = getApp();
+console.log(app.globalData.userInfo);
 Page({
 
   /**
@@ -18,7 +20,9 @@ Page({
     firstTransform: 'rotate(0deg)',
     secondTransform: 'rotate(0deg)',
     borderColor:"white white white transparent",
-    stepNum: 12313
+    stepNum: 12313,
+    dayNum:7,
+    userInfo: {}
   },
 
   goToPage: function (event) {
@@ -35,13 +39,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    // var val = 10;
-    // var query = wx.createSelectorQuery();
-    // var bg1 = query.select('#J_bg2_1');
-    // var bg2 = query.select('#J_bg2_2');
-    // var val = parseFloat(btn1.value).toFixed(2);
-    // val = Math.max(0,val);
-    // val = Math.min(100,val);
+    // console.log(this.data.headUrl);
+    console.log(app);
+    this.setData({
+      userInfo: app.globalData.userInfo
+    });
     var val = 10;
     if (val <= 50){
         this.setData({
@@ -98,30 +100,67 @@ Page({
     const ctx = wx.createCanvasContext('myCanvas');
     wx.downloadFile({
       // url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
-      url: 'https://wx.qlogo.cn/mmopen/vi_32/nUB9lOWn8HMSCoyywLbqicdH7atzzghAeh0vs2EKkO3aqDBLtR9dNZGQficLiaRWVAZugQ0kicCeY3iaEEZGoOcfqSg/0',
+      url: that.data.userInfo.avatarUrl,
       success: function(res) {
           // that.setData({
           //   images: res.tempFilePath
           // });
           ctx.setFillStyle('white')
           ctx.fillRect(0, 0, 300, 300)
-
           ctx.save()
           ctx.beginPath()
-          ctx.arc(50, 50, 25, 0, 2*Math.PI)
+          ctx.arc(35, 220, 25, 0, 2*Math.PI)
           ctx.clip()
-          ctx.drawImage(res.tempFilePath, 25, 25,50,50);
+          ctx.drawImage(res.tempFilePath, 10, 195,50,50);
           ctx.restore()
-          ctx.draw()
-          ctx.drawImage('https://weixin.mama100.cn/wmall/activity/2017/20170623_sevenDaysCrashClass/images/share.jpg', 0, 150, 150, 100)
-          ctx.setFontSize(20);
-          ctx.setFillStyle('#abcabc');
-          ctx.fillText('Hello',150,20);
-          ctx.setFontSize(60);
+          ctx.drawImage('../../images/share.png',10, 10,280,171);
+          // ctx.draw()
+          ctx.setFontSize(12);
+          ctx.setFillStyle('gray');
+          ctx.fillText(that.data.userInfo.nickName,30,260);
+          ctx.setFillStyle('black');
+          ctx.fillText('正在参加Swisse21天打卡计划',60,195);
+          ctx.setFillStyle('gray');
+          ctx.fillText('今天步数',60,210);
           ctx.setFillStyle('red');
-          ctx.fillText('world',150,40);
+          ctx.fillText(that.data.todayStep,115,210);
+          ctx.setFillStyle('gray');
+          ctx.fillText('步',160,210);
+          ctx.setFillStyle('gray');
+          ctx.fillText('已坚持',60,245);
+          ctx.setFillStyle('red');
+          ctx.fillText(that.data.dayNum,105,245);
+          ctx.setFillStyle('gray');
+          ctx.fillText('天，一共跑了',120,245);
+          ctx.setFillStyle('red');
+          ctx.fillText(that.data.allStep,60,260);
+          ctx.setFillStyle('gray');
+          ctx.fillText('步',115,260);
+          ctx.drawImage('../../images/code.png', 230, 195, 60, 60)
           ctx.save();
           ctx.draw(true);
+          wx.canvasToTempFilePath({
+            canvasId: 'myCanvas',
+            success: function(res) {
+              wx.saveImageToPhotosAlbum({
+                filePath: res.tempFilePath,
+                success: function (res1) {
+                  console.log(JSON.stringify(res1));
+                  // success
+                },
+                fail: function () {
+                  // fail
+                },
+                complete: function () {
+                  // complete
+                }
+              })
+            },
+            fail: function(res) {
+              console.log('baocunshibai');
+              console.log(res);
+            }
+          })
       }
     })
     // const ctx = wx.createCanvasContext('myCanvas');
@@ -137,28 +176,28 @@ Page({
     // ctx.fillText('world',150,40);
     // ctx.save();
     // ctx.draw();
-    // wx.canvasToTempFilePath({
-    //   canvasId: 'myCanvas',
-    //   success: function(res) {
-    //     wx.saveImageToPhotosAlbum({
-    //       filePath: res.tempFilePath,
-    //       success: function (res1) {
-    //         console.log(JSON.stringify(res1));
-    //         // success
-    //       },
-    //       fail: function () {
-    //         // fail
-    //       },
-    //       complete: function () {
-    //         // complete
-    //       }
-    //     })
-    //   },
-    //   fail: function(res) {
-    //     console.log('baocunshibai');
-    //     console.log(res);
-    //   }
-    // })
+    wx.canvasToTempFilePath({
+      canvasId: 'myCanvas',
+      success: function(res) {
+        wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success: function (res1) {
+            console.log(JSON.stringify(res1));
+            // success
+          },
+          fail: function () {
+            // fail
+          },
+          complete: function () {
+            // complete
+          }
+        })
+      },
+      fail: function(res) {
+        console.log('baocunshibai');
+        console.log(res);
+      }
+    })
   },
   onItemClick1: function (event) {
     var mUrl = "";

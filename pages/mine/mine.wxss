@@ -158,12 +158,121 @@
 }
 
 .foot{
+  padding:0px 10px;
+  position:relative;
+  margin-top:30px;
+}
+.foot .myTeam{
+  width:35vw;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  border:1px solid gray;
+  border-radius: 15px;
+}
+.foot .welfare{
+  width:35vw;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  border:1px solid gray;
+  border-radius: 15px;
+  position:absolute;
+  top:0px;
+  right:10px;
+}
+.remindContainer{
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px;
+  background:white;
+}
+.remindContainer .left{font-size:16px;}
+.remindContainer .left switch{}
+.remindContainer .left label{vertical-align: middle;}
+
+.remindContainer .right{font-size:16px;}
+.remindContainer .right .finish{padding:5px;border-radius: 5px;background: red;width:0px;height:0px;margin:0 10px;display:inline-block;}
+.remindContainer .right .unfinish{padding:5px;border-radius: 5px;background: gray;margin:0 10px;width:0px;height:0px;display:inline-block;}
+
+/* .downloadMask{position:fixed;top:0;right:0;left:0;bottom:0;background: black;opacity: 0.7;} */
+.downloadMask .downloadBtn{position:fixed;top:65%;width:80vw;left:10vw;z-index:100;}
+.downloadMask .downloadBtn image{
+  width:80vw;
+  height:11.72vw;
+}
+
+.downloadContainer{position:fixed;top:15%;width:80vw;left:8vw;background: white;border-radius: 10px;padding:2vw;z-index:100;}
+.downloadContainer .close{position:absolute;top:-20px;right:-20px;width:30px;height:30px;}
+.downloadContainer .bg{width:80vw;height:48.81vw;}
+
+.secondPart{
   display:-webkit-box;
   display:-moz-box;
   display:-ms-flexbox;
   display:flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
-.foot .myTeam{padding:10px 20px;border:1px solid gray;}
-.foot .welfare{}
+.secondPart .left{
+  -webkit-box-flex:1;
+  -moz-box-flex:1;
+  -webkit-flex:1;
+  -ms-flex:1;
+   flex:1;
+  text-align: center;
+  font-size:14px;
+  color:gray;
+}
+.secondPart .left image{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}
+.secondPart .left label{display:block;}
+.secondPart .middle{
+  -webkit-box-flex:2;
+  -moz-box-flex:2;
+  -webkit-flex:2;
+  -ms-flex:2;
+   flex:2;
+   font-size:12px;
+}
+.secondPart .middle .one{
+  color:black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.secondPart .middle .two{
+  color:gray;
+  margin-bottom:10px;
+}
+.secondPart .middle .two label{
+  color:red;
+}
+.secondPart .middle .three{color:gray;}
+.secondPart .middle .three label{color:red;}
+.secondPart .middle .four{color:gray;}
+.secondPart .middle .four label{color:red;}
+.secondPart .right{
+  -webkit-box-flex:1;
+  -moz-box-flex:1;
+  -webkit-flex:1;
+  -ms-flex:1;
+   flex:1;
+}
+.secondPart .right image{
+  width:60px;
+  height:60px;
+}
+
+
+
+
+

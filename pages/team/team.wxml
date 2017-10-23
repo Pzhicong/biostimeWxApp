@@ -1,0 +1,101 @@
+<view class="myTeam" wx:if="{{hasTeam}}">
+    <view style="background:#f5f5f5;padding-top:10px;">
+        <view class="topLogo">
+            <view class="rank">
+                <image src="../../images/rank.png"></image>
+                <view>排行榜</view>
+            </view>
+            <view class="swisse" style="visibility: hidden;">
+                <image src="../../images/swisse.png"></image>
+            </view>
+            <view class="question">
+                <image src="../../images/question.png"></image>
+                <view>无步数?</view>
+            </view>
+        </view>
+        <view>{{}}{{}}人团</view>
+        <view>为团队打call</view>
+        <view>
+            <label>跑团成员</label>
+            <label>步数</label>
+        </view>
+        <view></view>
+        <view wx:for="{{2}}">
+            <image src="https://wx.qlogo.cn/mmopen/vi_32/nUB9lOWn8HMSCoyywLbqicdH7atzzghAeh0vs2EKkO3aqDBLtR9dNZGQficLiaRWVAZugQ0kicCeY3iaEEZGoOcfqSg/0"></image>
+            <label>聪聪那些年</label>
+            <label>1999步</label>
+        </view>
+    </view>
+    <view>
+        <view>邀请好友</view>
+        <view>跑团须知</view>
+        <view>
+            <view>
+                <view>
+                    <image src="../../images/run.png"></image>
+                    <label>平均步数：{{}}</label>
+                </view>
+                <view>
+                    <image src="../../paimin.png"></image>
+                    <label>目前排名：{{}}</label>
+                </view>
+            </view>
+            <view>
+                <image src="../../images/code.png;"></image>
+                <label>关注Swisse官微理解更多战况</label>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="noTeam" wx:if="{{!hasTeam && showPage== 1}}">
+    <label style="color:white;position:absolute;top:20px;left:12vw;text-decoration: underline;font-size:12px;">跑团须知</label>
+    <image src="../../images/teambg.png" class="fullImages"></image>
+    <image src="../../images/award.png" class="award"></image>
+    <view class="section3">
+        <view class="p1">取个霸气的名字，出征吧！</view>
+        <view class="p2">
+            <label class="left"></label>
+            <input placeholder="请输入汉字或英文，不超过15个字符"></input>
+            <label class="right">GO</label>
+        </view>
+    </view>
+    <view class="foot">
+        <view class="myTeam" bindtap="onItemClick">
+            个人页面
+        </view>
+        <view class="welfare">
+            运动福利社
+        </view>
+    </view>
+</view>
+
+<view class="noTeam" wx:if="{{!hasTeam && showPage== 2}}">
+    <image src="../../images/teambg.png" class="fullImages"></image>
+    <image src="../../images/21day.png" class="logo"></image>
+    <view class="section1">
+        <view class="p1">【 {{teamName}} 】战队</view>
+        <view class="p2">每个跑团限5人</view>
+    </view>
+    <view class="section2">
+        <view class="p1 mt30">行者[{{nickName}}],你的跑团已成功创建！</view>
+        <view class="p1">邀请好友加入你的跑团</view>
+        <view class="p1">一起健康运动，赢取豪华大奖</view>
+        <view class="p2">
+            <view>每个跑团团员2~5人不等，</view>
+            <view>跑团里有2名成员即组团成功，</view>
+            <view>组团成功后可继续邀请好友参团，</view>
+            <view>团员最多不超过5人</view>
+        </view>
+        <view class="p3">邀请好友参团</view>
+        <view class="p4">跑团须知</view>
+    </view>
+    <view class="foot">
+        <view class="myTeam" bindtap="onItemClick">
+            个人页面
+        </view>
+        <view class="welfare">
+            运动福利社
+        </view>
+    </view>
+</view>

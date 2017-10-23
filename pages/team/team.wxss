@@ -1,0 +1,111 @@
+.mt30{margin-top:30px;}
+.noTeam{position:relative;width:100vw;height:100vh;overflow:hidden;}
+.noTeam .fullImages{width:100vw;height:100vh;}
+.noTeam .logo{
+  position: absolute;
+  top:15px;
+  width:25vw;
+  height:22.06vw;
+  left:37.5vw;
+}
+.noTeam .section1{
+  position: absolute;
+  top:20%;
+  width:100%;
+  text-align:center;
+  color:white;
+}
+.noTeam .section1 .p1{font-size:18px;font-weight: bold;}
+.noTeam .section1 .p2{font-size:12px;}
+.noTeam .section2{
+  position: absolute;
+  top:30%;
+  width:86vw;
+  left:7vw;
+  background: white;
+  text-align: center;
+  font-size:12px;
+  line-height: 1.5;
+}
+.noTeam .section2 .p1{color:black;}
+.noTeam .section2 .p2{color:gray;margin-top:30px;margin-bottom:50px;}
+.noTeam .section2 .p3{
+  line-height:30px;
+  font-weight: bold;
+  font-size:18px;
+  background: #e72c34;
+  margin:0 auto;
+  color:white;
+  display:inline;
+  padding:5px 15px;
+  border-radius: 5px;
+}
+.noTeam .section2 .p4{
+  margin:10px 0px 30px;
+  text-decoration: underline;
+  color:gray;  
+}
+.foot{
+  position:absolute;
+  bottom:5%;
+  width:80vw;
+  left:10vw;
+}
+.foot .myTeam{
+  color:white;
+  display:inline-block;
+  padding:5px 30px;
+  border-radius: 20px;
+  font-size:12px;
+  border: 1px solid white;
+}
+.foot .welfare{
+  color:white;
+  display:inline-block;
+  padding:5px 30px;
+  border-radius: 20px;
+  font-size:12px;
+  border: 1px solid white;
+  position: absolute;
+  right:0px;
+}
+
+
+.noTeam .award{
+  position: absolute;
+  width:80vw;
+  top:15px;
+  left:10vw;
+  height:100.84vw;
+}
+
+.noTeam .section3{position:absolute;top:120vw;width:100%;}
+.noTeam .section3 .p1{text-align: center;color:white;font-weight:bold;margin-bottom:10px;}
+.noTeam .section3 .p2{width:80%;margin:0 auto;text-align:center;}
+.noTeam .section3 .left{}
+.noTeam .section3 input{
+  width:56vw;
+  background:white;
+  display:inline-block;
+  font-size:12px;
+  padding-left:20px;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+  height:30px;
+  line-height:30px;
+}
+.noTeam .section3 .right{
+  vertical-align:top;
+  line-height:1.4rem;
+  height:1.4rem;
+  background:red;
+  padding-right:20px;
+  color:white;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+  padding:1.5px 8px 1px;
+  display:inline-block;
+  height:30px;
+  line-height:30px;
+  padding:0px 5px;
+}

@@ -7,10 +7,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasTeam: false,
+    hasTeam: true,
     showPage: 1,
     teamName:'那些年',
-    nickName: ''
+    teamNumber: 4,
+    nickName: '聪聪那些年',
+    mySteps:'1232323'
   },
 
   goToPage: function (event) {

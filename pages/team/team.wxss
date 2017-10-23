@@ -109,3 +109,72 @@
   line-height:30px;
   padding:0px 5px;
 }
+
+
+
+
+.topLogo{
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.topLogo .rank{
+  -webkit-box-flex:1;
+  -moz-box-flex:1;
+  -webkit-flex:1;
+  -ms-flex:1;
+   flex:1;
+   text-align: center;
+}
+.topLogo .rank image{width:30px;height:30px;}
+.topLogo .rank view{color:gray;font-size:14px;}
+.topLogo .swisse{
+  -webkit-box-flex:2;
+  -moz-box-flex:2;
+  -webkit-flex:2;
+  -ms-flex:2;
+   flex:2;
+   text-align: center;
+}
+.topLogo .swisse image{
+  width:20vw;
+  height:7.48vw;
+}
+.topLogo .question{
+  -webkit-box-flex:1;
+  -moz-box-flex:1;
+  -webkit-flex:1;
+  -ms-flex:1;
+   flex:1;
+   text-align: center;
+}
+.topLogo .question image{width:30px;height:30px;}
+.topLogo .question view{color:gray;font-size:14px;}
+
+.myTeam .section1 .title{
+  font-weight: bold;
+  text-align: center;
+}
+.myTeam .section1 .call{
+  font-size:12px;
+  color:red;
+  text-align: center;
+  text-decoration: underline;
+}
+.myTeam .section1 .table{}
+.myTeam .section1 .table .th1{}
+.myTeam .section1 .table .th2{}
+.myTeam .section1 .line{}
+.myTeam .section1 .tabelItem{}
+.myTeam .section1 .tabelItem image{}
+.myTeam .section1 .tabelItem .td1{}
+.myTeam .section1 .tabelItem .td2{}
+
+.myTeam .section2{}
+.myTeam .section2 .p1{}
+.myTeam .section2 .p2{}
+.myTeam .section2 .p3{}
+

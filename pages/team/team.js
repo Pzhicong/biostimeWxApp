@@ -12,7 +12,9 @@ Page({
     teamName:'那些年',
     teamNumber: 4,
     nickName: '聪聪那些年',
-    mySteps:'1232323'
+    mySteps:'1232323',
+    averageStep:123333,
+    teamRank: 4
   },
 
   goToPage: function (event) {

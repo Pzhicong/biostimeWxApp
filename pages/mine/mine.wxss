@@ -6,6 +6,7 @@
   display:flex;
   justify-content: center;
   align-items: center;
+  margin-bottom:20px;
 }
 .topLogo .rank{
   -webkit-box-flex:1;
@@ -57,12 +58,7 @@ body {
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
-    top:12%;
     left:50%;
-    
-    /* top: 50px;
-    left: 50px; */
-    /* background-color: #ccc;   */
     background-color: white;
 }
 
@@ -234,7 +230,11 @@ body {
 /* 日历模块 */
 
 .calendar{}
-.calendar .p1{}
+.calendar .p1{
+  text-align: center;
+  padding:15px 0px;
+  font-size:12px;
+}
 .calendar .p2{
   display:-webkit-box;
   display:-moz-box;
@@ -247,7 +247,6 @@ body {
   text-align:center;
 }
 .calendar .p2 view{
-  
   width:14.28%;
 }
 .calendar .p3 {

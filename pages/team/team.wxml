@@ -15,44 +15,42 @@
         </view>
         <view class="title">{{teamName}}{{teamNumber}}人团</view>
         <view class="call">为团队打call</view>
-        <view class="table">
-            <label class="th1">跑团成员</label>
-            <label class="th2">步数</label>
-        </view>
-        <view class="line"></view>
-        <view wx:for="{{2}}" class="tabelItem">
-            <image src="https://wx.qlogo.cn/mmopen/vi_32/nUB9lOWn8HMSCoyywLbqicdH7atzzghAeh0vs2EKkO3aqDBLtR9dNZGQficLiaRWVAZugQ0kicCeY3iaEEZGoOcfqSg/0"></image>
-            <label class="td1">{{nickName}}</label>
-            <label class="td2">{{mySteps}}</label>
+        <view style="padding:0px 20px;">
+            <view class="table">
+                <label class="th1">跑团成员</label>
+                <label class="th2">步数</label>
+            </view>
+            <view class="line"></view>
+            <view wx:for="{{2}}" class="tabelItem">
+                <label style="position:relative;">
+                    <image src="https://wx.qlogo.cn/mmopen/vi_32/nUB9lOWn8HMSCoyywLbqicdH7atzzghAeh0vs2EKkO3aqDBLtR9dNZGQficLiaRWVAZugQ0kicCeY3iaEEZGoOcfqSg/0"></image>
+                    <label class="td1">{{nickName}}</label>
+                    <label wx:if="{{index == 0}}" style="position:absolute;bottom:-10px;left:-10px;padding:2px 5px;border-radius:10px;background:red;color:white;font-size:12px;">团长</label>
+                </label>
+                <label class="td2">{{mySteps}}</label>
+            </view>
         </view>
     </view>
     <view class="section2">
         <view class="p1">邀请好友参团</view>
-        <view class="p2">跑团须知</view>
-        <view class="p3">
-            <view>
-                <view>
-                    <image src="../../images/run.png"></image>
-                    <label>平均步数：{{}}</label>
-                </view>
-                <view>
-                    <image src="../../images/paimin.png"></image>
-                    <label>目前排名：{{}}</label>
-                </view>
-            </view>
-            <view>
-                <image src="../../images/code.png;"></image>
-                <label>关注Swisse官微理解更多战况</label>
-            </view>
+        <label class="p2">跑团须知</label>
+        <label class="p3">通知打卡</label>
+        <view class="p4 mt30">
+            <image src="../../images/run.png"></image>
+            <label>平均步数：{{averageStep}}</label>
+        </view>
+        <view class="p4">
+            <image src="../../images/paimin.png"></image>
+            <label>目前排名：{{teamRank}}</label>
         </view>
     </view>
-    <view class="foot">
-            <view class="myTeam" bindtap="onItemClick">
-                个人页面
-            </view>
-            <view class="welfare">
-                运动福利社
-            </view>
+    <view class="rankFoot">
+        <label class="left" bindtap="onItemClick">
+            个人页面
+        </label>
+        <label class="right">
+            运动福利社
+        </label>
     </view>
 </view>
 

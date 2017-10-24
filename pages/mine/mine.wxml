@@ -13,25 +13,9 @@
                 <view>无步数</view>
             </view>
         </view>
-        <view style="text-align:center;" wx:if="{{false}}">当日目标1万步，未完成，加油！</view>
-        <view style="text-align:center;">已超过1万步。太厉害了！</view>
-        <!-- <view style="background:#f5f5f5;padding:20px;">
-                <view class="demo1-bg1">
-                    <view id="J_bg2_1" class="demo1-bg2-1" style="transform:{{firstTransform}};"></view>
-                    <view id="J_bg2_2" class="demo1-bg2-2"  style="transform:{{secondTransform}};border-color:{{borderColor}}"></view>
-                </view>
-                <view>当前步数</view>
-                <view>{{stepNum}}</view>
-            </view> -->
-        <view style="background:#f5f5f5;position:relative;height:200px;">
-            <!-- <view class="circleProgress_wrapper">
-                    <view class="wrapper right">
-                        <view class="circleProgress rightcircle"></view>
-                    </view>
-                    <view class="wrapper left">
-                        <view class="circleProgress leftcircle"></view>
-                    </view>
-                </view> -->
+        <view style="text-align:center;font-size:14px;" wx:if="{{false}}">当日目标1万步，未完成，加油！</view>
+        <view style="text-align:center;font-size:14px;">已超过1万步。太厉害了！</view>
+        <view style="background:#f5f5f5;position:relative;height:200px;margin:10px 0px;">
             <view class="wrap">
                 <view class="circle {{circleClass}}">
                     <view class="percent leftCircle" style="transform:{{rotateNun}};-webkit-transform:{{rotateNun}};"></view>
@@ -44,7 +28,7 @@
                 <view>{{stepNum}}</view>
             </view>
         </view>
-        <view style="text-align:center;text-decoration: underline;color:red;margin-top:30px;">为自己打call</view>
+        <view style="text-align:center;text-decoration: underline;color:red;font-size:14px;">为自己打Call</view>
         <view style="padding:20px;font-size:14px;font-weight:bold;">
             <label>本期总步数：{{allStep}}</label>
             <label style="float:right;text-decoration:underline;">我的记录</label>

@@ -1,5 +1,6 @@
 // home.js
 var app = getApp();
+var util = require('../../libs/calendar.js')
 console.log(app.globalData.userInfo);
 Page({
 
@@ -24,7 +25,17 @@ Page({
     dayNum:7,
     userInfo: {},
     canvasAppear: 'none',
-    maskAppear: 'block'
+    maskAppear: 'none',
+    circleClass: '',
+    rightClass: 'wth0',
+    rotateNun: '',
+    monthFirstDay: 3,
+    monthLen: 30,
+    allLenth: '',
+    today:15,
+    thisMonthData:[
+      10000,900,20000,3000
+    ]
   },
 
   goToPage: function (event) {
@@ -35,7 +46,20 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    var allLenth = 0;
+    var length = this.data.monthFirstDay + this.data.monthLen;
+    var weeks = parseInt(length/7);
+    var yushu = length%7;
+    if (yushu > 0) {
+      allLenth = 7 * (weeks +1);
+    } else {
+      allLenth = length;
+    }
+    this.setData({
+      allLenth: allLenth
+    });
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -46,26 +70,22 @@ Page({
     this.setData({
       userInfo: app.globalData.userInfo
     });
-    var val = 10;
-    if (val <= 50){
+    var percent = 70;
+    if (percent > 100) {
+        percent = 100;
         this.setData({
-          secondTransform: "rotate(" + 180 * val * 2 / 100 + "deg)",
-          borderColor:'white white white transparent',
-          firstTransform: "rotate(0deg)"
+          circleClass: '',
+          rightClass: 'wth0'
         });
-        // bg2.style.transform = "rotate(" + 180 * val * 2 / 100 + "deg)";
-        // bg2.style.borderColor = "white white white transparent";
-        // bg1.style.transform = "rotate(0deg)";
-    }else{
+    } else if (percent > 50) {
       this.setData({
-        secondTransform: "rotate(0deg)",
-        borderColor:'red red red transparent',
-        firstTransform: "rotate(" + 180 * (val - 50) * 2 / 100 + "deg)"
+        circleClass: 'clip-auto',
+        rightClass: ''
       });
-        // bg2.style.transform = "rotate(0deg)";
-        // bg2.style.borderColor = "red red red transparent";
-        // bg1.style.transform = "rotate(" + 180 * (val - 50) * 2 / 100 + "deg)";
     }
+    this.setData({
+      rotateNun: "rotate(" + (18 / 5) * percent + "deg)"
+    });
   },
 
   /**

@@ -10,12 +10,12 @@
             </view>
             <view class="question">
                 <image src="../../images/question.png"></image>
-                <view>无步数</view>
+                <view>无步数?</view>
             </view>
         </view>
         <view style="text-align:center;font-size:14px;" wx:if="{{false}}">当日目标1万步，未完成，加油！</view>
         <view style="text-align:center;font-size:14px;">已超过1万步。太厉害了！</view>
-        <view style="background:#f5f5f5;position:relative;height:200px;margin:10px 0px;">
+        <view style="background:#f5f5f5;position:relative;height:150px;margin:10px 0px;">
             <view class="wrap">
                 <view class="circle {{circleClass}}">
                     <view class="percent leftCircle" style="transform:{{rotateNun}};-webkit-transform:{{rotateNun}};"></view>
